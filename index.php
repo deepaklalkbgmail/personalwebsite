@@ -30,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   <meta property="og:title" content="Deepaklal KB — Infrastructure Engineer" />
   <meta property="og:description" content="DevOps • Kubernetes • Performance Engineering • Cloud" />
   <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" />
+  <link rel="stylesheet" href="loader.css" />
   <style>
   /* === base + tokens (partly minified) === */
   :root{--bg:#0b0f14;--bg-soft:#10151d;--card:#111827;--muted:#8b9bb4;--txt:#e6edf3;--accent:#6ee7ff;--accent-2:#b16fff;--ring:0 0 0 2px rgba(110,231,255,.35);--shadow:0 10px 30px rgba(0,0,0,.35);--radius:16px;--max:1200px}
@@ -124,20 +126,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   h2{font-size:1.5rem;margin:0 0 1rem}
   .section-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
   .filters{display:flex;gap:.4rem}
-  /* loader */
-  body.loading{overflow:hidden}
-  #loader{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;z-index:9999;background:var(--bg);overflow:hidden}
-  #loader .door{flex:1;height:100%;background:url('DSC_4750.jpg') center/cover no-repeat;animation-duration:5s;animation-fill-mode:forwards}
-  #loader .door.left{animation-name:openLeft}
-  #loader .door.right{animation-name:openRight}
-  @keyframes openLeft{to{transform:translateX(-100%)}}
-  @keyframes openRight{to{transform:translateX(100%)}}
+
   </style>
 </head>
 <body class="loading">
   <div id="loader">
-    <div class="door left"></div>
-    <div class="door right"></div>
+    <div class="container">
+      <div class="game-area">
+        <div class="flash"></div>
+        <div class="blue-fall-row">
+          <div class="block fall1"></div>
+          <div class="block fall2"></div>
+          <div class="block fall3"></div>
+          <div class="block fall4"></div>
+        </div>
+        <div class="yellow-row">
+          <div class="block y1"></div>
+          <div class="block y2"></div>
+          <div class="block y3"></div>
+          <div class="block y4"></div>
+        </div>
+        <div class="blue-stay-row">
+          <div class="block stay1"></div>
+          <div class="block stay2"></div>
+          <div class="block stay3"></div>
+        </div>
+        <div class="red-row">
+          <div class="block r1"></div>
+          <div class="block r2"></div>
+          <div class="block r3"></div>
+          <div class="block r4"></div>
+        </div>
+      </div>
+      <div class="message">
+        <h1> Leveling up...</h1>
+      </div>
+    </div>
   </div>
   <a class="skip" href="#content">Skip to content</a>
   <header>
@@ -391,7 +415,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   function setTheme(t){document.documentElement.dataset.theme=t;localStorage.setItem(key,t)}
   setTheme(localStorage.getItem(key)||'dark');
   // loader
-  window.addEventListener('load',()=>{setTimeout(()=>{ $('#loader').style.display='none'; document.body.classList.remove('loading'); },5000);});
+  window.addEventListener('load',()=>{setTimeout(()=>{ $('#loader').style.display='none'; document.body.classList.remove('loading'); },6000);});
   $('#themeToggle').addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
   // mobile menu
   $('#menuToggle').addEventListener('click',()=>document.body.classList.toggle('nav-open'));
