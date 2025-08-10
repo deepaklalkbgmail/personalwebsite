@@ -134,24 +134,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
     <div class="container">
       <div class="game-area">
         <div class="flash"></div>
-        <div class="blue-fall-row">
+        <div class="row blue-fall-row">
           <div class="block fall1"></div>
           <div class="block fall2"></div>
           <div class="block fall3"></div>
           <div class="block fall4"></div>
         </div>
-        <div class="yellow-row">
+        <div class="row yellow-row">
           <div class="block y1"></div>
           <div class="block y2"></div>
           <div class="block y3"></div>
           <div class="block y4"></div>
         </div>
-        <div class="blue-stay-row">
+        <div class="row blue-stay-row">
           <div class="block stay1"></div>
           <div class="block stay2"></div>
           <div class="block stay3"></div>
         </div>
-        <div class="red-row">
+        <div class="row red-row">
           <div class="block r1"></div>
           <div class="block r2"></div>
           <div class="block r3"></div>
