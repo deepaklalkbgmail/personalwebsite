@@ -251,9 +251,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
 
     <section id="skills">
       <div class="wrap">
-        <div class="section-head"><h2>Skills</h2></div>
+        <div class="section-head">
+          <h2>Skills</h2>
+        </div>
         <div class="grid skills">
-          <div class="card"><h3>Cloud & Infrastructure</h3>
+          <div class="card">
+            <h3>Cloud &amp; Infrastructure</h3>
             <div>
               <span class="chip">Azure (IaaS, PaaS, Sentinel, ASR)<span class="tooltip">Microsoft cloud platform providing infrastructure and platform services</span></span>
               <span class="chip">Disaster Recovery<span class="tooltip">Business continuity strategy to restore systems after disasters</span></span>
@@ -263,7 +266,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
               <span class="chip">Kubernetes • OpenShift<span class="tooltip">Container orchestration platforms for managing containerized applications</span></span>
             </div>
           </div>
-          <div class="card"><h3>DevSecOps</h3>
+          <div class="card">
+            <h3>DevSecOps</h3>
             <div>
               <span class="chip">Jenkins<span class="tooltip">Self-contained Java-based program for continuous integration automation</span></span>
               <span class="chip">GitLab<span class="tooltip">DevOps platform providing Git repository and CI/CD capabilities</span></span>
@@ -272,7 +276,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
               <span class="chip">Dependency Track<span class="tooltip">Component analysis platform for identifying vulnerable dependencies</span></span>
             </div>
           </div>
-          <div class="card"><h3>Perf & Observability</h3>
+          <div class="card">
+            <h3>Perf &amp; Observability</h3>
             <div>
               <span class="chip">JMeter<span class="tooltip">Java application for load testing and performance measurement</span></span>
               <span class="chip">Apache Benchmarking<span class="tooltip">Command-line tool for benchmarking HTTP web servers</span></span>
@@ -289,7 +294,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
               <span class="chip">Dynatrace<span class="tooltip">AI-powered observability platform for cloud-native environments</span></span>
             </div>
           </div>
-          <div class="card"><h3>Middleware</h3>
+          <div class="card">
+            <h3>Middleware</h3>
             <div>
               <span class="chip">JBoss<span class="tooltip">Open-source Java EE application server for enterprise applications</span></span>
               <span class="chip">WebSphere<span class="tooltip">IBM enterprise Java application server for mission-critical workloads</span></span>
