@@ -1,0 +1,152 @@
+/* loader styles */
+body.loading{overflow:hidden}
+#loader{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:white;
+  z-index:9999;
+}
+#loader .container{
+  background:white;
+  width:90vmin;
+  height:90vmin;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+#loader .message{text-align:center;}
+#loader .game-area{
+  width:70%;
+  height:70%;
+  background:black;
+  border-radius:10%;
+  position:relative;
+  overflow:hidden;
+}
+#loader .block{
+  height:100%;
+  width:25%;
+  border-radius:10%;
+  border:black 0.5vmin solid;
+  margin:0;
+  box-sizing:border-box;
+  position:absolute;
+}
+#loader .flash{
+  height:20%;
+  width:300%;
+  position:absolute;
+  background:white;
+  top:60%;
+  left:-300%;
+  animation:flash 6s linear infinite;
+  z-index:4;
+}
+#loader .row{
+  height:20%;
+  width:80%;
+  position:absolute;
+}
+#loader .red-row{
+  top:80%;
+  left:10%;
+}
+#loader .red-row .block{background:#d50000;}
+#loader .blue-stay-row{
+  top:-40%;
+  transform:translate(0,500%);
+  left:10%;
+  animation:blue-stay 6s linear infinite;
+}
+#loader .blue-stay-row .block{background:#304ffe;}
+#loader .blue-fall-row{
+  top:-40%;
+  left:10%;
+  animation:blue-fall 6s linear infinite;
+}
+#loader .blue-fall-row .block{background:#304ffe;}
+#loader .yellow-row{
+  top:-40%;
+  left:30%;
+  animation:yellow-fall 6s linear infinite;
+}
+#loader .yellow-row .block{background:#ffd600;}
+#loader .fall1{left:0;top:100%;}
+#loader .fall2{left:0;}
+#loader .fall3{left:25%;}
+#loader .fall4{left:50%;}
+#loader .y1{left:0;}
+#loader .y2{left:25%;}
+#loader .y3{left:50%;}
+#loader .y4{left:50%;top:100%;}
+#loader .stay1{left:0;}
+#loader .stay2{left:25%;}
+#loader .stay3{left:50%;}
+#loader .r1{left:0;}
+#loader .r2{left:25%;}
+#loader .r3{left:50%;}
+#loader .r4{left:75%;}
+
+@media (max-width:300px),(max-height:300px){
+  #loader .game-area{height:60%;width:60%;}
+  #loader .container{background:black;border-radius:10%;overflow:hidden;}
+  #loader .message{animation:colour-change 6s linear infinite;}
+  #loader .yellow-row,
+  #loader .blue-fall-row,
+  #loader .blue-stay-row,
+  #loader .flash{animation:none;}
+  #loader .yellow-row{transform:translate(0,400%);}
+}
+@media (max-width:200px),(max-height:200px){
+  #loader .game-area{display:none;}
+  #loader .message{font-size:1em;}
+}
+
+@keyframes yellow-fall{
+  0%{transform:translate(0,0);}
+  20%,24%{transform:translate(0,400%);}
+  25%,74%{transform:translate(0,500%);}
+  75%,90%{transform:translate(0,600%);}
+  0%,74%{opacity:1;}
+  75%,100%{opacity:0;}
+}
+@keyframes blue-stay{
+  0%,24%{transform:translate(0,500%);}
+  25%,74%{transform:translate(0,600%);}
+  75%,100%{transform:translate(0,500%);}
+  74%,76%{opacity:0;}
+  77%,100%{opacity:1;}
+}
+@keyframes blue-fall{
+  0%,50%{transform:translate(0,0);}
+  70%,74%{transform:translate(0,400%);}
+  75%,99%{transform:translate(0,500%);}
+  100%{transform:translate(0,0);}
+  0%,78%{opacity:1;}
+  79%,100%{opacity:0;}
+}
+@keyframes flash{
+  0%,20%{transform:translate(0,0);}
+  23%,30%{transform:translate(100%,0);}
+  30%,35%{transform:translate(300%,0);}
+  0%,28%{opacity:1;}
+  36%,49%{opacity:0;}
+  40%,70%{transform:translate(0,0);}
+  73%,80%{transform:translate(100%,0);}
+  80%,85%{transform:translate(300%,0);}
+  70%,74%{opacity:1;}
+  84%,100%{opacity:0;}
+  100%{transform:translate(0,0);}
+}
+@keyframes colour-change{
+  0%,7%{color:#d50000;}
+  33%,40%{color:#304ffe;}
+  66%,73%{color:#ffd600;}
+  100%{color:#d50000;}
+}
