@@ -118,15 +118,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   .flash.ok{background:rgba(25,135,84,.1)}.flash.err{background:rgba(220,53,69,.1)}
   /* footer */
   footer{margin-top:2rem;padding:2rem 0;color:var(--muted)}
-  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot{display:flex;flex-direction:column;gap:1rem;justify-content:center;align-items:center;text-align:center}
   /* sections */
   section{padding:2.2rem 0}
   h2{font-size:1.5rem;margin:0 0 1rem}
   .section-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
   .filters{display:flex;gap:.4rem}
+  /* loader */
+  body.loading{overflow:hidden}
+  #loader{position:fixed;inset:0;display:flex;z-index:9999;background:var(--bg)}
+  #loader .door{flex:1;background:url('DSC_4750.jpg') center/cover no-repeat;animation-duration:5s;animation-fill-mode:forwards}
+  #loader .door.left{animation-name:openLeft}
+  #loader .door.right{animation-name:openRight}
+  @keyframes openLeft{to{transform:translateX(-100%)}}
+  @keyframes openRight{to{transform:translateX(100%)}}
   </style>
 </head>
-<body>
+<body class="loading">
+  <div id="loader">
+    <div class="door left"></div>
+    <div class="door right"></div>
+  </div>
   <a class="skip" href="#content">Skip to content</a>
   <header>
     <div class="wrap nav">
@@ -366,7 +378,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
 
   <footer>
     <div class="wrap foot">
-      <p>© <span id="y"></span> Deepaklal KB • Built with a tiny sprinkle of jQuery‑like magic and modern CSS ✨</p>
+      <p>© <span id="y"></span> Deepaklal KB</p>
       <p><a href="#home">Back to top ↑</a></p>
     </div>
   </footer>
@@ -378,6 +390,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   const key='theme', prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
   function setTheme(t){document.documentElement.dataset.theme=t;localStorage.setItem(key,t)}
   setTheme(localStorage.getItem(key)||'dark');
+  // loader
+  window.addEventListener('load',()=>{setTimeout(()=>{ $('#loader').style.display='none'; document.body.classList.remove('loading'); },5000);});
   $('#themeToggle').addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
   // mobile menu
   $('#menuToggle').addEventListener('click',()=>document.body.classList.toggle('nav-open'));
