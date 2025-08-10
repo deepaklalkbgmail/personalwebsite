@@ -174,9 +174,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
             <span class="chip">DR: On‑prem ↔ Azure</span>
           </div>
           <div class="stats grid">
-            <div class="card stat"><strong>Microservices @ scale</strong><h3>OpenShift • Kubernetes</h3></div>
-            <div class="card stat"><strong>DevSecOps</strong><h3>Jenkins pipelines • SCA</h3></div>
-            <div class="card stat"><strong>Perf & Observability</strong><h3>JMeter • ELK • Grafana</h3></div>
+            <div class="card stat">
+              <h3>Project &amp; Team Management</h3>
+              <ul>
+                <li>Project Planning</li>
+                <li>Site Inspection</li>
+                <li>DR Drill Planning</li>
+                <li>Communication Skills</li>
+                <li>Team Leadership</li>
+                <li>Latex documentation</li>
+              </ul>
+            </div>
+            <div class="card stat">
+              <h3>System &amp; Infrastructure Administration</h3>
+              <ul>
+                <li>System Integration</li>
+                <li>K8s Administration</li>
+                <li>Middleware Integration</li>
+                <li>Application Servers: JBoss, WebSphere, WebLogic, Tomcat</li>
+                <li>Webserver: Apache HTTPD, IHS, OHS, JBCS</li>
+                <li>Load balancer: mod-jk, proxy, proxy balancer, mod cluster</li>
+                <li>Database: MySQL 14.14, Oracle 12c, Oracle 19c, MSSQL, postgresql 16</li>
+                <li>Cloud Solutions</li>
+                <li>Cloud technologies: Azure (IaaS, PaaS, Sentinel, ASR), WHM, cPanel</li>
+                <li>OS: Ubuntu (18.04, 22.04), RHEL-Opopta, Kali Linux</li>
+              </ul>
+            </div>
+            <div class="card stat">
+              <h3>Monitoring, Performance &amp; Security</h3>
+              <ul>
+                <li>Performance management</li>
+                <li>Performance testing: JMeter, Apache benchmarking</li>
+                <li>Monitoring: Elastic search, Kibana, FluentD, Grafana, Wireshark, NMON, Glowroot, Apache extended status, AppDynamics, IBM Instana, Dynatrace</li>
+                <li>Java heap/thread dump analysis</li>
+                <li>Security: Burp Suite, Azure Monitor, Kali Linux tools</li>
+              </ul>
+            </div>
+            <div class="card stat">
+              <h3>DevOps, Automation &amp; Development</h3>
+              <ul>
+                <li>Microservice Tools: Docker, Kubernetes, OpenShift</li>
+                <li>Scripting Languages: Powershell, Shell</li>
+                <li>DevOps: Jenkins, Gitlab, SonarQube, Trivy, Dependency Track</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div>
