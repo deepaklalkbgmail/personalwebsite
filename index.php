@@ -85,8 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   @media(max-width:640px){.hero-cta{flex-direction:column;align-items:flex-start}.hero-cta .btn{width:100%;justify-content:center}}
   @media(min-width:860px){.hero h1{font-size:3rem}}
   .badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
-  .stats{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1rem}
-  .stat{padding:1rem}
+  .stats{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1rem;grid-auto-rows:1fr}
+  .stat{padding:1rem;display:flex;flex-direction:column;height:100%}
   .stat h3{margin:.2rem 0 0;font-size:1.1rem}
 
   /* skills */
@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
 
   <main id="content">
     <section class="hero" id="home">
-      <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:center">
+      <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:start">
         <div>
           <div class="headline-badge glow">
             <span class="headline-title">IT Infrastructure Engineer • AI Generalist</span>
