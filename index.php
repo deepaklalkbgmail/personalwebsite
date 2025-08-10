@@ -57,7 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   .headline-badge:hover{transform:scale(1.05)}
   .headline-title{font-size:1.1rem;font-weight:700;color:#ffffff;text-shadow:0 1px 2px rgba(0,0,0,.2);letter-spacing:.5px}
   .grid{display:grid;gap:1rem}
-  .hero{padding:5rem 0 3rem;background:radial-gradient(1200px 300px at 50% -10%,rgba(110,231,255,.15),transparent 60%),radial-gradient(1000px 300px at 70% -5%,rgba(177,111,255,.15),transparent 60%)}
+  .hero{padding:5rem 0 1rem;background:radial-gradient(1200px 300px at 50% -10%,rgba(110,231,255,.15),transparent 60%),radial-gradient(1000px 300px at 70% -5%,rgba(177,111,255,.15),transparent 60%)}
+  .hero-photo{height:100%}
+  .hero-photo img{height:100%;width:100%;object-fit:cover}
   /* header */
   .skip{position:absolute;left:-9999px;top:auto}.skip:focus{left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem 1rem;z-index:999}
   header{position:sticky;top:0;z-index:900;background:rgba(16,21,30,.6);backdrop-filter:saturate(120%) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
@@ -156,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
 
   <main id="content">
     <section class="hero" id="home">
-      <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:start">
+      <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:stretch">
         <div>
           <div class="headline-badge glow">
             <span class="headline-title">IT Infrastructure Engineer • AI Generalist</span>
@@ -217,7 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
           </div>
         </div>
         <div>
-          <div class="card glow"><img src="DSC_4748.jpg" alt="Portrait of Deepaklal KB"/></div>
+          <div class="card glow hero-photo"><img src="DSC_4748.jpg" alt="Portrait of Deepaklal KB"/></div>
         </div>
       </div>
     </section>
@@ -226,12 +228,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
       <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:start">
         <div class="card" style="padding:1rem">
           <h2>About</h2>
-          <p>Infrastructure engineer with end‑to‑end ownership across middleware, cloud, and DevOps. I’ve led banking platform deployments, built Jenkins‑based DevSecOps pipelines, and implemented disaster recovery across Azure and on‑prem environments. Previously hands‑on in performance engineering and application servers; I love clean automation and measurable outcomes.</p>
+          <p>Infrastructure engineer and AI generalist with end‑to‑end ownership across middleware, cloud, and DevOps. I’ve led banking platform deployments, built Jenkins‑based DevSecOps pipelines, and implemented disaster recovery across Azure and on‑prem environments. Previously hands‑on in performance engineering and application servers; I love clean automation and measurable outcomes.</p>
           <div class="badges">
             <span class="chip">Middleware → Cloud integration</span>
             <span class="chip">Platform SRE mindset</span>
             <span class="chip">Security by default</span>
           </div>
+          <h3>Languages</h3>
+          <div id="langs" class="badges"></div>
         </div>
         <aside class="card" style="padding:1rem">
           <h2>At a glance</h2>
@@ -383,6 +387,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('nav-open')){document.body.classList.remove('nav-open')}});
   // footer year
   $('#y').textContent=new Date().getFullYear();
+  // languages
+  const langs=[
+    {name:'English',skills:'write, speak, read'},
+    {name:'Malayalam',skills:'write, speak, read'},
+    {name:'Hindi',skills:'write, speak, read'},
+    {name:'Tamil',skills:'speak'}
+  ];
+  const langsEl=document.getElementById('langs');
+  if(langsEl){
+    langs.forEach(l=>{
+      const span=document.createElement('span');
+      span.className='chip';
+      span.textContent=`${l.name} — ${l.skills}`;
+      langsEl.appendChild(span);
+    });
+  }
   // dynamic timeline
   const data={
     experience:[
