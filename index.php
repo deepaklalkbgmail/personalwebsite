@@ -188,16 +188,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
             <div class="card stat">
               <h3>System &amp; Infrastructure Administration</h3>
               <ul>
-                <li>System Integration</li>
-                <li>K8s Administration</li>
-                <li>Middleware Integration</li>
                 <li>Application Servers: JBoss, WebSphere, WebLogic, Tomcat</li>
                 <li>Webserver: Apache HTTPD, IHS, OHS, JBCS</li>
                 <li>Load balancer: mod-jk, proxy, proxy balancer, mod cluster</li>
                 <li>Database: MySQL 14.14, Oracle 12c, Oracle 19c, MSSQL, postgresql 16</li>
-                <li>Cloud Solutions</li>
                 <li>Cloud technologies: Azure (IaaS, PaaS, Sentinel, ASR), WHM, cPanel</li>
-                <li>OS: Ubuntu (18.04, 22.04), RHEL-Opopta, Kali Linux</li>
+                <li>OS: Ubuntu (18.04, 22.04), RHEL, Kali Linux</li>
               </ul>
             </div>
             <div class="card stat">
