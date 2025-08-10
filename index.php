@@ -213,17 +213,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
           </div>
           <div class="stats grid">
             <div class="card stat">
-              <h3>Project &amp; Team Management</h3>
-              <ul>
-                <li>Project Planning</li>
-                <li>Site Inspection</li>
-                <li>DR Drill Planning</li>
-                <li>Communication Skills</li>
-                <li>Team Leadership</li>
-                <li>Latex documentation</li>
-              </ul>
-            </div>
-            <div class="card stat">
               <h3>System &amp; Infrastructure Administration</h3>
               <ul>
                 <li>Application Servers: JBoss, WebSphere, WebLogic, Tomcat</li>
@@ -250,6 +239,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
                 <li>Microservice Tools: Docker, Kubernetes, OpenShift</li>
                 <li>Scripting Languages: Powershell, Shell</li>
                 <li>DevOps: Jenkins, Gitlab, SonarQube, Trivy, Dependency Track</li>
+              </ul>
+            </div>
+            <div class="card stat">
+              <h3>Project &amp; Team Management</h3>
+              <ul>
+                <li>Project Planning</li>
+                <li>Site Inspection</li>
+                <li>DR Drill Planning</li>
+                <li>Communication Skills</li>
+                <li>Team Leadership</li>
+                <li>Latex documentation</li>
               </ul>
             </div>
           </div>
