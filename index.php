@@ -65,7 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   .nav a{color:var(--txt)}
   .brand{display:flex;align-items:center;gap:.7rem}
   .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:var(--shadow);overflow:hidden;border:2px solid rgba(110,231,255,.4)}
-  .brand .logo img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+  .brand .logo img{width:100%;height:100%;object-fit:cover;border-radius:8px;transform:scale(1.2);transition:transform .3s ease}
+  .brand .logo:hover img{transform:scale(1)}
   .menu{display:flex;gap:1rem;align-items:center}
   .menu a{padding:.45rem .6rem;border-radius:8px}
   .menu a:hover{background:rgba(255,255,255,.06)}
@@ -127,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   <a class="skip" href="#content">Skip to content</a>
   <header>
     <div class="wrap nav">
-      <div class="brand"><div class="logo" aria-hidden="true"><img src="DSC_4748.jpg" alt="Deepaklal KB"></div>
+      <div class="brand"><div class="logo" aria-hidden="true"><img src="DSC_4749.JPG" alt="Deepaklal KB"></div>
         <a href="#home" class="only-desktop"><strong>Deepaklal KB</strong></a>
       </div>
       <nav class="menu only-desktop" aria-label="Primary">
