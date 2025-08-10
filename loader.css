@@ -7,11 +7,11 @@ body.loading{overflow:hidden}
   display:flex;
   justify-content:center;
   align-items:center;
-  background:white;
+  background:black;
   z-index:9999;
 }
 #loader .container{
-  background:white;
+  background:black;
   width:90vmin;
   height:90vmin;
   position:relative;
