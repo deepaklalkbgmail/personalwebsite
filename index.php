@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   .filters{display:flex;gap:.4rem}
   /* loader */
   body.loading{overflow:hidden}
-  #loader{position:fixed;inset:0;display:flex;z-index:9999;background:var(--bg)}
+  #loader{position:fixed;top:0;left:0;right:0;bottom:0;display:flex;z-index:9999;background:var(--bg)}
   #loader .door{flex:1;background:url('DSC_4750.jpg') center/cover no-repeat;animation-duration:5s;animation-fill-mode:forwards}
   #loader .door.left{animation-name:openLeft}
   #loader .door.right{animation-name:openRight}
