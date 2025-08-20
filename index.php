@@ -42,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_token']) && $
   .wrap{max-width:var(--max);margin:auto;padding:0 1rem}
   .sr-only{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap}
   .chip{display:inline-block;padding:.35rem .6rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;font-size:.8rem;margin:.25rem .35rem .25rem 0;color:var(--txt);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.06));position:relative;cursor:help;transition:all .2s ease}
-  .chip:hover{transform:scale(1.05);border-color:var(--accent);box-shadow:0 0 15px rgba(110,231,255,.3)}
+  .chip:hover{transform:scale(1.05);border-color:var(--accent);box-shadow:0 0 15px rgba(110,231,255,.3);z-index:1001}
   .tooltip{position:absolute;bottom:120%;left:50%;transform:translateX(-50%) scale(0);background:var(--card);border:1px solid var(--accent);border-radius:12px;padding:.7rem 1rem;font-size:.75rem;white-space:nowrap;z-index:1000;box-shadow:0 8px 25px rgba(0,0,0,.25);opacity:0;transition:all .25s cubic-bezier(0.68,-0.55,0.265,1.55);pointer-events:none}
   .tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--accent)}
-  .chip:hover .tooltip{opacity:1;transform:translateX(-50%) scale(1);animation:tooltipBounce .3s ease}
+  .chip:hover .tooltip{opacity:1;transform:translateX(-50%) scale(1);animation:tooltipBounce .3s ease;z-index:1002}
   @keyframes tooltipBounce{0%{transform:translateX(-50%) scale(0)}50%{transform:translateX(-50%) scale(1.1)}100%{transform:translateX(-50%) scale(1)}}
   .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.2rem;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:600;border:none;box-shadow:var(--shadow);transition:all .25s ease;position:relative;overflow:hidden}
   .btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 25px rgba(110,231,255,.4)}
