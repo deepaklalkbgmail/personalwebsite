@@ -138,6 +138,7 @@ $EDUCATION = [
 ];
 
 $CERTIFICATIONS = [
+    'Certified Kubernetes Application Developer (CKAD)',
     'Microsoft Certified: Azure Administrator Associate (AZ-104)',
     'Microsoft Certified: Azure Security Engineer Associate (AZ-500)',
     'CompTIA Linux+',
